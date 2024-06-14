@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Hello Chrome Extension",
+  "version": "1.0",
+  "description": "A Chrome extension that adds Hello to user input",
+  "icons": {
+    "128": "logo.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "http://localhost:5000/*"
+  ]
+}

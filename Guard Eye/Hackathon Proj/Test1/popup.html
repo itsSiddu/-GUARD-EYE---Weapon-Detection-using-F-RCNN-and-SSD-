@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Brython Example</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.5/brython.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.5/brython_stdlib.min.js"></script>
+  </head>
+  <body onload="brython()">
+    <h1>Brython Example</h1>
+    <p>Enter your name:</p>
+    <input type="text" id="nameInput">
+    <button onclick="sayHello()">Say Hello</button>
+    <p id="greeting">Here</p>
+    <script type="text/python">
+      def sayHello():
+        console.log("Hi");
+        name = document.getElementById('nameInput').value
+        greeting = f'Hello, {name}!'
+        document.getElementById('greeting').textContent = greeting
+    </script>
+  </body>
+</html>
